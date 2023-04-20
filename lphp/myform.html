@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 10px 50px;
+        }
+
+        .formdesign {
+            font-size: 20px;
+            padding-top: 50px;
+        }
+
+        .formdesign input {
+
+            width: 50%;
+
+        }
+
+        .form {
+
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My first Validation form with Backend</h1>
+    <form id="myform" onkeyup="validate()" class="form" style="padding: 20px;" action="" method="get">
+        <div style="padding: 20px;">
+            Name:
+            <input type="text" id="firstName"  style="width: 500px;" name="name">
+            <span id="firstNameError" class="formerror" style="display: none;color: brown;"></span>
+        </div>
+        <div style="padding: 20px;">
+            Email:
+            <input id="myemail"   type="email" style="width: 500px;" name = "email">
+            <span id="emailError" class="formerror" style="display: none;color: brown;"></span>
+        </div>
+        <div  style="padding: 20px;">
+            Number:
+            <input id="myphone" type="number" style="width: 500px;" name="number">
+            <span id="numberError" class="formerror" style="display: none;color: brown;"></span>
+        </div>
+        <div id="Comments" style="padding: 20px;">
+            Comments:
+            <input type="text" style="width: 500px;" name="comment">
+            <span id="CoomentError" class="formerror" style="display: none;color: brown;"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    
+
+
+    <script>
+
+
+        function setError(id, error) {
+            document.getElementById(id).style.display = 'inline-block'
+            document.getElementById(id).innerHTML = error;
+
+        }
+
+        function removeError(id) {
+            document.getElementById(id).style.display = 'none'
+        }
+
+        function validate() {
+
+            var name = document.getElementById('firstName').value;
+            var phone = document.getElementById("myphone").value;
+            var email = document.getElementById("myemail").value;
+
+            if (name.length < 4) {
+                setError('firstNameError', 'name length too short');
+
+
+            } else {
+                removeError('firstNameError')
+            };
+
+            if (name == 0) {
+                setError('firstNameError', 'name is required');
+            }
+
+            if (phone.length > 10 || phone.length < 10) {
+                setError("numberError", "number is invalid")
+            } else {
+                removeError('numberError')
+            }
+
+            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+
+                setError("emailError", "email is invalid")
+            }
+            else {
+                removeError('emailError')
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <?php print_r($_GET); ?>
+</body>
+
+</html>

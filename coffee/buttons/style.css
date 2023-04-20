@@ -1,0 +1,80 @@
+body {
+    background-color: blanchedalmond;
+}
+
+#one {
+    height: 40px;
+    width: 100px;
+    background: green;
+    border: transparent;
+    color: white;
+}
+
+#two {
+    height: 40px;
+    width: 100px;
+    background: transparent;
+    border-radius: 5px;
+}
+
+#three {
+    height: 40px;
+    width: 100px;
+    background: blue;
+    border-radius: 20px;
+}
+
+#shadow {
+    height: 40px;
+    width: 100px;
+    background: red;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .8);
+    color: blue;
+}
+
+#one:hover {
+    color: black;
+    background: grey;
+
+}
+
+#one:active {
+    color: black;
+    background: yellow;
+
+}
+
+#one {
+    width: 250px;
+    position: relative;
+    animation: mymove 10s infinite;
+}
+
+
+#one::after {
+    content: 'Chal Chutiye';
+    width: 500px;
+}
+
+
+@keyframes mymove {
+    0% {
+        top: 0px;
+    }
+
+    25% {
+        top: 200px;
+        right: 700px;
+    }
+
+    75% {
+        top: 3px;
+        left: 700px;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+    }
+}

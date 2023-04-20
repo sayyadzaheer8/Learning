@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+html {
+    font-size: 62.55%;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+    padding: 5rem 0rem;
+}
+
+h3 {
+
+    font-size: 2.8rem;
+}
+
+button {
+    font-size: 1.8rem;
+}
+
+nav {
+    background-color: lightgray;
+    padding: 3rem;
+}
+
+nav h1 {
+    float: left;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    font-size: 3rem;
+}
+
+nav li {
+    float: left;
+    margin: 0rem 4rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.contents {
+    background-color: transparent;
+    background-image: url("../miniproject/one.jpg");
+    height: 80rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding-top: 15rem;
+    text-shadow: 5px 5px 10px grey;
+}
+
+.contents button {
+    padding: 1rem 4rem;
+    margin: 4rem;
+    background: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.form_section {
+    margin: auto;
+    background-color: green;
+    width: 200px;
+    overflow: none;
+
+}
+
+form label,
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    resize: vertical;
+    padding: 5px 10px;
+}
+
+form input {
+    background-color: blue;
+}
+
+.input_group {
+
+    padding: 5px 10px;
+}
