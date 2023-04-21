@@ -13,7 +13,7 @@ if (mysqli_connect_error()) {
 }
 
 $sql = "SELECT *
-        FROM blogs
+        FROM users
         ;";
 
 $result = mysqli_query($conn, $sql); 

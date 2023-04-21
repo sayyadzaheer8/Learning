@@ -1,18 +1,18 @@
 /*<?php
 
-    if (count($_post)>0) {
-        $username = $_POST['username'];
+    if (count($_POST)>0) {
+        $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $connection = new mysqli("localhost", "root", "", "zaheerweb");
+        $connection = new mysqli("localhost", "root", "", "zaheerdata");
 
         if ($connection->connect_error) {
             echo "Failed to connect!";
             die();
         }
 
-        $result = $connection->query("INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')");
+        $result = $connection->query("INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')");
 
         if ($result == true) {
             echo "User registered successfully!";
@@ -40,7 +40,7 @@
             <label class="block text-gray-700 font-bold mb-2" for="username">
               Username
             </label>
-            <input class="border border-gray-400 p-2 w-full rounded-lg" type="text" id="username" name="username" />
+            <input class="border border-gray-400 p-2 w-full rounded-lg" type="text" id="username" name="name" />
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 font-bold mb-2" for="email">
