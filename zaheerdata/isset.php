@@ -15,3 +15,5 @@ if(isset($myarray["email"])== true )  {
 }
 
 echo "done";
+
+?>

@@ -1,7 +1,7 @@
 <?php
 
 
-if (count($_POST) > 0) {
+if ($_POST)  {
     $content = $_POST['content'];
 
 

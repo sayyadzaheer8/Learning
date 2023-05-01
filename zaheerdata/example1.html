@@ -1,0 +1,42 @@
+<script>
+
+
+
+
+function greet() {
+    console.log('123');
+}
+
+
+var hello = () => {
+    console.log('123')
+}
+
+hello()
+
+var greet = () => {
+    console.log('123')
+}
+
+greet()
+
+() => {
+    console.log('123')
+    var greet = () => {
+        console.log('greeting')
+    }
+}
+
+new Promise(
+    (resolve, reject) => {
+        if (1 === 1) {
+            resolve('Yes, both are equal')
+        } else {
+            reject("No they are not equal")
+        }
+    }
+)
+
+
+
+</script>
