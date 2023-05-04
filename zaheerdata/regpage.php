@@ -17,6 +17,24 @@ if($_POST)  {
         die();
     }
 
+
+    if(empty($name) || empty($email)) {
+
+        echo "details missing please fill all info";
+        die();
+        header("location: regpage.php");
+
+
+    }
+
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL));  {
+
+        ECHO "INVALID EMAIL";
+        die();
+
+
+    }
+
     $result = $connection->query("INSERT INTO newdata (name,email,password) VALUES ('$name','$email','$password')");
 
     if($result == true) {
